@@ -1,6 +1,11 @@
 import React from "react";
 
-function Card({ items, checked }) {
+function Card({ items, checked, fav, handleFav }) {
+  //If no results
+  if (items == null) {
+    return <div>Nothing to see here...</div>;
+  }
+
   function filterByAuth(item) {
     if (item.Auth == "" && checked.null) {
       return true;
@@ -28,13 +33,30 @@ function Card({ items, checked }) {
 
   return (
     <div>
-      {httpFiltered.map((item) => (
+      {httpFiltered.map((item, index) => (
         <div>
-          <h4 key={item.Link}>{item.API}</h4>
+          <h4 key={index}>{item.API}</h4>
           <h5>{item.Description}</h5>
           <h5>{item.Auth}</h5>
           <h5>{item.Cors}</h5>
           <h5>{item.Link}</h5>
+          {fav.findIndex((fav) => fav.Link === item.Link) === -1 ? (
+            <button
+              onClick={() => {
+                handleFav({ type: "ADD", payload: { item } });
+              }}
+            >
+              Add
+            </button>
+          ) : (
+            <button
+              onClick={() => {
+                handleFav({ type: "DEL", payload: { item } });
+              }}
+            >
+              Delete
+            </button>
+          )}
         </div>
       ))}
     </div>

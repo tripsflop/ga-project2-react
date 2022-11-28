@@ -13,7 +13,10 @@ function Header() {
         <Link to="/Content">Explore</Link>
       </div>
       <div className="nav-item">
-        <Link to="/about">About</Link>
+        <Link to="/About">About</Link>
+      </div>
+      <div className="nav-item">
+        <Link to="/Favourite">Favourite</Link>
       </div>
     </div>
   );
