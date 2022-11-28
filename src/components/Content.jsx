@@ -3,7 +3,6 @@ import { useEffect, useState, useReducer } from "react";
 import Category from "./Category";
 import Card from "./Card";
 import Checkbox from "./Checkbox";
-import useFetch from "../hooks/useFetch";
 import Search from "./Search";
 
 function Content({ fav, handleFav }) {
@@ -20,8 +19,6 @@ function Content({ fav, handleFav }) {
     apikey: true,
     https: true,
   });
-
-  const cat = useFetch("https://api.publicapis.org/categories");
 
   const handlenullChange = () => {
     setChecked({ ...checked, null: !checked.null });
@@ -82,44 +79,27 @@ function Content({ fav, handleFav }) {
   };
 
   return (
-    <>
-      {cat ? (
-        <div className="App">
-          <Search handleSearch={handleSearch} />
-          <Category category={cat.categories} handleClick={selectCategory} />
-
-          {/* <Category category={categories} handleClick={selectCategory}/> */}
-          <Checkbox
-            label="null"
-            value={checked.null}
-            onChange={handlenullChange}
-          />
-          <Checkbox
-            label="oAuth"
-            value={checked.oAuth}
-            onChange={handleoAuthChange}
-          />
-          <Checkbox
-            label="apiKey"
-            value={checked.apikey}
-            onChange={handleapiKeyChange}
-          />
-          <Checkbox
-            label="https"
-            value={checked.https}
-            onChange={handlehttpsChange}
-          />
-          <Card
-            items={items}
-            checked={checked}
-            fav={fav}
-            handleFav={handleFav}
-          />
-        </div>
-      ) : (
-        <div>Loading</div>
-      )}
-    </>
+    <div className="App">
+      <Search handleSearch={handleSearch} />
+      <Category category={categories} handleClick={selectCategory} />
+      <Checkbox label="null" value={checked.null} onChange={handlenullChange} />
+      <Checkbox
+        label="oAuth"
+        value={checked.oAuth}
+        onChange={handleoAuthChange}
+      />
+      <Checkbox
+        label="apiKey"
+        value={checked.apikey}
+        onChange={handleapiKeyChange}
+      />
+      <Checkbox
+        label="https"
+        value={checked.https}
+        onChange={handlehttpsChange}
+      />
+      <Card items={items} checked={checked} fav={fav} handleFav={handleFav} />
+    </div>
   );
 }
 

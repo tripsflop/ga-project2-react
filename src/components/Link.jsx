@@ -27,7 +27,6 @@ function Link() {
   };
 
   const [fav, dispatch] = useReducer(favsReducer, []);
-  console.log(fav);
 
   const handleFav = (item) => {
     dispatch(item);
