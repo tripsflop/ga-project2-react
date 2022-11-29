@@ -81,8 +81,22 @@ function Content({ fav, handleFav }) {
   return (
     <div className="App">
       <Search handleSearch={handleSearch} />
-      <Category category={categories} handleClick={selectCategory} />
-      <Checkbox label="null" value={checked.null} onChange={handlenullChange} />
+      <main>
+        <div>
+          <Category category={categories} handleClick={selectCategory} />
+        </div>
+        <div className="pl-80">
+          <div>
+            <Card
+              items={items}
+              checked={checked}
+              fav={fav}
+              handleFav={handleFav}
+            />
+          </div>
+        </div>
+      </main>
+      {/* <Checkbox label="null" value={checked.null} onChange={handlenullChange} />
       <Checkbox
         label="oAuth"
         value={checked.oAuth}
@@ -97,8 +111,7 @@ function Content({ fav, handleFav }) {
         label="https"
         value={checked.https}
         onChange={handlehttpsChange}
-      />
-      <Card items={items} checked={checked} fav={fav} handleFav={handleFav} />
+      /> */}
     </div>
   );
 }
