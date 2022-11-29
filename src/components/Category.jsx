@@ -4,7 +4,7 @@ function Category({ category, handleClick }) {
   return (
     <aside id="sidebar" class="fixed" aria-labelledby="sidebar-label">
       {" "}
-      <div className="overflow-y-auto pb-44 px-3 h-full scrolling-touch max-w-2xs lg:h-[calc(100vh-3rem)] lg:block lg:fixed bg-gray-50 rounded dark:bg-gray-800">
+      <div className="overflow-y-auto pb-60 px-3 h-full scrolling-touch max-w-2xs lg:h-[calc(100vh-3rem)] hidden lg:block lg:fixed bg-gray-50 rounded dark:bg-gray-800">
         <ul className="space-y-2">
           {category?.map((entry, index) => (
             <li key={index} onClick={() => handleClick({ entry })}>
