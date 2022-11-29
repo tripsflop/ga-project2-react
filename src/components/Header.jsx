@@ -29,7 +29,7 @@ function Header() {
               <Link to="/Content">Explore</Link>
             </div>
             <div className="nav-item">
-              <Link to="/Favourite">Favourite</Link>
+              <Link to="/Favourite">Compare</Link>
             </div>
             <div className="nav-item">
               <Link to="/About">Credits</Link>

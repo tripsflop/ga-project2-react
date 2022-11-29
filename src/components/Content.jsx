@@ -85,7 +85,7 @@ function Content({ fav, handleFav }) {
         <div>
           <Category category={categories} handleClick={selectCategory} />
         </div>
-        <div className="pl-80">
+        <div className="lg:pl-80">
           <div>
             <Card
               items={items}

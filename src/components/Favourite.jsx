@@ -2,7 +2,7 @@ import React from "react";
 
 function Favourite({ fav, handleFav }) {
   return (
-    <div className="mt-8 grid lg:grid-cols-3 md:grid-cols-2 gap-10 m-20">
+    <div className="mt-8 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-10 m-20">
       {fav.map((item, index) => (
         <div
           key={index}

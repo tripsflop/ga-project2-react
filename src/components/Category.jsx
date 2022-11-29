@@ -2,13 +2,9 @@ import React from "react";
 
 function Category({ category, handleClick }) {
   return (
-    <aside
-      id="sidebar"
-      class="fixed inset-0 z-20 flex-none hidden h-full w-72 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-48 lg:block"
-      aria-labelledby="sidebar-label"
-    >
+    <aside id="sidebar" class="fixed" aria-labelledby="sidebar-label">
       {" "}
-      <div className="overflow-y-auto py-4 px-3 z-20 h-full scrolling-touch max-w-2xs lg:h-[calc(100vh-3rem)] lg:block lg:fixed bg-gray-50 rounded dark:bg-gray-800">
+      <div className="overflow-y-auto pb-44 px-3 h-full scrolling-touch max-w-2xs lg:h-[calc(100vh-3rem)] lg:block lg:fixed bg-gray-50 rounded dark:bg-gray-800">
         <ul className="space-y-2">
           {category?.map((entry, index) => (
             <li key={index} onClick={() => handleClick({ entry })}>
