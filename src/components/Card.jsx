@@ -32,7 +32,7 @@ function Card({ items, checked, fav, handleFav }) {
   //if no results return refine query
 
   return (
-    <div className="relative mt-8 grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-10">
+    <div className="mt-8 grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-10">
       {httpFiltered.map((item, index) => (
         <div
           key={index}
