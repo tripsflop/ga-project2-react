@@ -87,9 +87,9 @@ function Content({ fav, handleFav }) {
         <div className="mt-5 lg:pl-80">
           <div className="sticky top-0 z-40 w-full m-auto">
             <div className="grid lg:grid-cols-2">
-              <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-                <li class="w-full dark:border-gray-600">
-                  <div class="flex items-left pl-3">
+              <ul className="items-center w-full text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                <li className="w-full dark:border-gray-600">
+                  <div className="flex items-left pl-3">
                     Filter by Authentication
                   </div>
                 </li>
