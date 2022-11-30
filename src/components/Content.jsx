@@ -4,7 +4,6 @@ import Category from "./Category";
 import Card from "./Card";
 import Checkbox from "./Checkbox";
 import Search from "./Search";
-import "flowbite";
 
 function Content({ fav, handleFav }) {
   //List of the categories
