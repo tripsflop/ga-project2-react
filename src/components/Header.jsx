@@ -13,11 +13,11 @@ function Header() {
 
   return (
     <React.Fragment>
-      <nav className="relative container mx-auto px-6 pt-6">
+      <nav className="static mx-auto px-6 pt-6">
         <div className="flex items-center justify-between">
           <div className="pt-2">
-            <img className="inline-block" src="./assets/api.png" alt="" />
-            <div className="inline-block text-xl font-bold"> API Explorer</div>
+            <img className="inline" src="./assets/api.png" alt="" />
+            <div className="inline text-xl font-bold"> API Explorer</div>
           </div>
           <div className="hidden md:flex space-x-6 font-semibold">
             <div className="nav-item">
