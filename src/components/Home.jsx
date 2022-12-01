@@ -35,7 +35,7 @@ function Home() {
           </div>
         </div>
         <div className="md:w-1/2 pb-10">
-          <img src="src/assets/output.png"></img>
+          <img src="public/assets/output.png"></img>
         </div>
       </div>
     </section>

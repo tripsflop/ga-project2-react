@@ -39,7 +39,7 @@ npm run preview
 
 ## Wireframe
 
-![Screens](/src/assets/wireframe.jpg)
+![Screens](/public/assets/wireframe.jpg)
 
 The game will consist of three different screens/views.
 
