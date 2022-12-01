@@ -80,53 +80,42 @@ function Content({ fav, handleFav }) {
 
   return (
     <div className="App">
-      <main>
-        <div>
-          <Category category={categories} handleClick={selectCategory} />
-        </div>
-        <div className="mt-5 lg:pl-80">
-          <div className="sticky top-0 z-40 w-full m-auto">
-            <div className="grid lg:grid-cols-2">
-              <ul className="items-center w-full text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-                <li className="w-full dark:border-gray-600">
-                  <div className="flex items-left pl-3">
-                    Filter by Authentication
-                  </div>
-                </li>
-                <Checkbox
-                  label="null"
-                  value={checked.null}
-                  onChange={handlenullChange}
-                />
-                <Checkbox
-                  label="oAuth"
-                  value={checked.oAuth}
-                  onChange={handleoAuthChange}
-                />
-                <Checkbox
-                  label="apiKey"
-                  value={checked.apikey}
-                  onChange={handleapiKeyChange}
-                />
-                <Checkbox
-                  label="https"
-                  value={checked.https}
-                  onChange={handlehttpsChange}
-                />
-              </ul>
-              <Search handleSearch={handleSearch} />
-            </div>
-          </div>
-          <div>
-            <Card
-              items={items}
-              checked={checked}
-              fav={fav}
-              handleFav={handleFav}
-            />
+      <Category category={categories} handleClick={selectCategory} />
+      <div className="mt-5 lg:pl-80">
+        <div className="sticky top-0 z-40 w-full m-auto">
+          <div className="grid lg:grid-cols-2">
+            <ul className="items-center w-full text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+              <li className="w-full dark:border-gray-600">
+                <div className="flex items-left pl-3">
+                  Filter by Authentication
+                </div>
+              </li>
+              <Checkbox
+                label="null"
+                value={checked.null}
+                onChange={handlenullChange}
+              />
+              <Checkbox
+                label="oAuth"
+                value={checked.oAuth}
+                onChange={handleoAuthChange}
+              />
+              <Checkbox
+                label="apiKey"
+                value={checked.apikey}
+                onChange={handleapiKeyChange}
+              />
+              <Checkbox
+                label="https"
+                value={checked.https}
+                onChange={handlehttpsChange}
+              />
+            </ul>
+            <Search handleSearch={handleSearch} />
           </div>
         </div>
-      </main>
+        <Card items={items} checked={checked} fav={fav} handleFav={handleFav} />
+      </div>
     </div>
   );
 }
